@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header { /*Cabeçalho fica com a cor roxa, padding fica 1rem em cima e em baixo e 0 na esquerda e direita, cor do texto fica branco, display flex, borda inferior fica com 16px e a cor fica roxa, justifica o conteúdo e o texto fica em itálico*/
+  background-color: #5f27cd;
+  padding: 1rem 0;
+  color: #fff;
+  display: flex;
+  border-bottom: 16px solid #341f97;
+  justify-content: center;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+header button { /*Botão de adicionar fica com a cor verde e o cursor fica com a mãozinha*/
+  margin-left: 1rem;
+}
+
+form { /*Formulário fica com a cor cinza e o padding fica 1.5rem em cima e em baixo e 0 na esquerda e direita*/
+  background-color: #c8d6e5;
+  padding: 1.5rem 0;
+  text-align: center;
+  display: none;
+}
+
+form h2 { /*Título do formulário fica com a cor roxa*/
+  margin-bottom: 1rem;
+}
+
+input,
+button { /*Inputs e botões ficam um ao lado do outro*/
+  padding: 0.5rem;
+}
+
+button { /*Botões ficam com a cor verde e o cursor fica com a mãozinha*/
+  background-color: #009132;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#botao-cancelar { /*Botão cancelar fica com a cor vermelha*/
+  background-color: #ff0000;
+}
+
+ul {
+  display: flex; /*Elementos ficam um ao lado do outro*/
+  flex-wrap: wrap; /*Quando chega ao limite, cria uma nova linha */
+}
+
+ul li {
+  max-width: 25%;
+  list-style: none; /*Retira a marcação da li*/
+  position: relative;
+  max-height: 17.5rem;
+  overflow-y: hidden;
+}
+
+ul li img { /*Imagem ocupa 100% da largura e altura*/
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-imagem-link { /*Cria uma camada por cima da imagem*/
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all ease .5s; /*Transição de 0 para .5s*/
+}
+
+.overlay-imagem-link a { /*Retira a marcação do link*/
+  color: #fff;
+  text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link { /*Quando passar o mouse por cima da imagem, a opacidade vai para 1*/
+  opacity: 1;
+}
